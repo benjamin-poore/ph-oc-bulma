@@ -1,0 +1,82 @@
+@import "node_modules/@fortawesome/fontawesome-svg-core/styles.css";
+@import "/node_modules/bulma/bulma.sass";
+@import "./hamburger.scss";
+
+form {
+  width: 500px;
+  max-width: 100%;
+}
+.navbar-item img {
+  max-height: none;
+}
+
+.animate-left,
+.animate-right,
+.animate-bottom {
+  opacity: 0;
+}
+
+.animate-left.is-active,
+.animate-right.is-active,
+.animate-bottom.is-active {
+  position: relative;
+  opacity: 1;
+  //   display: block;
+}
+
+.animate-left.is-active {
+  animation: animateleft 1s;
+}
+
+.animate-right.is-active {
+  animation: animateright 1s;
+}
+
+.animate-bottom.is-active {
+  animation: animateBottom 1.5s;
+}
+
+@keyframes animateBottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
